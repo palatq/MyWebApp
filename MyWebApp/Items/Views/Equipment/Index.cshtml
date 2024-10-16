@@ -1,0 +1,26 @@
+﻿@page
+@model IEnumerable<MyWebApp.Models.Equipment>
+
+<h1>Equipments</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var equipment in Model)
+        {
+            <tr>
+                <td>@equipment.Name</td>
+                <td>
+                    <!-- Добавьте действия, такие как редактирование или удаление -->
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="@Url.Action("Create")">Create New Equipment</a>
